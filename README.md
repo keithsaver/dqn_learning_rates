@@ -15,3 +15,10 @@ Python 3.6, Tensorflow 1.13.1, Keras 2.2.4, Gym, atari-py (https://github.com/Ko
 
 For both cartpole and acrobot, the lowest learning rate performed best, and higher learning rates resulted in lower scores. Higher learning rates seem to to overtrain the model at points, not letting it slowly converge on a more effective strategy. The model struggled to learn on space invaders, as the environment is very complex (even with 15+ hours of training, with following hardware: Windows 10 with i7 - 6700k CPU @ 4.00GHz, 32GB RAM).
 
+## Model and Methods
+
+Deep Q Networks (DQN) have been shown to be very effective at learning and improving within games. In this experiment, the goal was to test a DQN's performance while varying the learning rate of the neural net used to decide on the network's action at each point in time.
+
+I based my implementation of DQN on a couple other implementations: https://github.com/gsurma/cartpole/blob/master/cartpole.py, https://github.com/keon/deep-q-learning. Some of the changes were made to improve the ability of the network to train on some of the more complex environments.
+
+Cartpole-v1, Acrobot-v1, and SpaceInvaders-ram-v0 were selected as the testing environments as they provide varied levels of complexity in which to test the DQN.
