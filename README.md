@@ -21,4 +21,8 @@ Deep Q Networks (DQN) have been shown to be very effective at learning and impro
 
 I based my implementation of DQN on a couple other implementations: https://github.com/gsurma/cartpole/blob/master/cartpole.py, https://github.com/keon/deep-q-learning. Some of the changes were made to improve the ability of the network to train on some of the more complex environments.
 
-Cartpole-v1, Acrobot-v1, and SpaceInvaders-ram-v0 were selected as the testing environments as they provide varied levels of complexity in which to test the DQN.
+Cartpole-v1, Acrobot-v1, and SpaceInvaders-ram-v0 were selected as the testing environments as they provide varied levels of complexity in which to test the DQN. Cartpole is the simplest environment, with acrobot being slightly more difficult, and space invaders being the most complex.
+
+Three learning rates (0.001, 0.003, and 0.005) were tested for each of the three environments, for a total of 9 runs. Each run consists of 500 episodes (playing the game until a loss occurs). The score for each episode is tracked.
+
+## Results
