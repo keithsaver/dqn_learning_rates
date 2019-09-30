@@ -26,3 +26,15 @@ Cartpole-v1, Acrobot-v1, and SpaceInvaders-ram-v0 were selected as the testing e
 Three learning rates (0.001, 0.003, and 0.005) were tested for each of the three environments, for a total of 9 runs. Each run consists of 500 episodes (playing the game until a loss occurs). The score for each episode is tracked.
 
 ## Results
+
+See charts folder for data and graphs of results.
+
+For the Cartpole runs, the lowest learning (0.001) clearly has the best scores, with a running average hovering around 150 from around 150 runs forward. The DQN learns quickly, and generally maintains a high average score. However, there is still a section from around runs 160-220 with very low scores. Reinforcement learning algorithms can occasionally reach areas where they have converged on an incorrect strategy, and take a while to adjust back. This is clearly seen here, as the model performs very badly for that period of time, but then recovers. As the learning rate is increased, the running average scores decrease. Additionally, as the learning rate is increased, the prevalence of sections with consistently low scores also increases.
+
+Training on Acrobot shows similar patterns as Cartpole, with the lowest learning rate having by far the best results. The scores decrease as the learning rate increases, and there are again many areas with consistently lower scores with the higher learning rates. The model reached its highest scores more quickly (in terms of run number) with Acrobot than Cartpole, which is likely because the Acrobot environment tends to take slightly longer to run than Cartpole, especially at first. Thus, the model sees more states per run early on with Acrobot, resulting in more training and fewer random actions in earlier run numbers than with Cartpole.
+
+Space Invaders did not seem to learn in any significant manner. There does not seem to be noticeable or consistent improvement above random actions for any of the learning rates throughout the entire training periods. As discussed earlier, Space Invaders is a far more complex environment than either Cartpole or Acrobot, so it does make sense that training struggles here. Given that the DQN model did improve on Cartpole and Acrobot, it is likely that it would also improve performance in Space Invaders given enough time, but 500 episodes does not seem to be enough.
+
+## Conclusions
+
+From the results, it seems that lower learning rates for neural nets tends to result in improved training for reinforcement learning. Due to the tendency of reinforcement learning models to struggle to converge, this makes sense, as a lower learning rate may then lead to a slow but steady path to convergence, whereas higher learning rates may lead to the neural net skipping over potential convergence areas. Along this line of thought, it would also be interesting to run similar experiments but with even lower learning rates.
