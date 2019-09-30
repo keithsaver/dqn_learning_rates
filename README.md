@@ -13,7 +13,7 @@ Python 3.6, Tensorflow 1.13.1, Keras 2.2.4, Gym, atari-py (https://github.com/Ko
 
 ## Summary of Results
 
-For both cartpole and acrobot, the lowest learning rate performed best, and higher learning rates resulted in lower scores. Higher learning rates seem to to overtrain the model at points, not letting it slowly converge on a more effective strategy. The model struggled to learn on space invaders, as the environment is very complex (even with 15+ hours of training, with following hardware: Windows 10 with i7 - 6700k CPU @ 4.00GHz, 32GB RAM).
+For both cartpole and acrobot, the lowest learning rate performed best, and higher learning rates resulted in lower scores. Higher learning rates seem to to overtrain the model at points, not letting it slowly converge on a more effective strategy. The model struggled to learn on space invaders within the allotted time, as the environment is very complex.
 
 ## Model and Methods
 
